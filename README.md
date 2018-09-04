@@ -1,7 +1,7 @@
 Traefik_PathPrefixStrip_issue_demo
 ---
 
-This repo was created to illustrate an issue with Traefik_PathPrefixStrip first commented on in this [PR](https://github.com/containous/traefik/pull/3631#issuecomment-412660594) and later reported in this [issue](https://github.com/containous/traefik/issues/3852).
+This repo was created to illustrate an issue with Traefik PathPrefixStrip first commented on in this [PR](https://github.com/containous/traefik/pull/3631#issuecomment-412660594) and later reported in this [issue](https://github.com/containous/traefik/issues/3852).
 
 Once you've clone the repo locally and providing you have docker installed, run: ```docker-compose up```
 
