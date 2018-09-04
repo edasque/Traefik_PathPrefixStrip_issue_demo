@@ -7,7 +7,7 @@
 # Optional
 # Default: false
 #
-# debug = true
+debug = true
 
 # Log level
 #
