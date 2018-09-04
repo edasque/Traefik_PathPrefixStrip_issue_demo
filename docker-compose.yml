@@ -1,0 +1,33 @@
+version: '3'
+services:
+  node_app:
+    image: node:10.9-alpine
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    container_name: node_app
+    labels:
+        - traefik.enable=true
+        - "traefik.frontend.rule=PathPrefixStrip: /my-app"
+    command: "node serve.js"
+    ports:
+      - '9000:9000'
+
+  traefik:
+    container_name: traefik
+    ports:
+      - '48080:8080'
+      - '40080:80'
+    volumes:
+      - './traefik.toml:/etc/traefik/traefik.toml'
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    image: traefik:1.7-alpine
+    labels:
+      - com.centurylinklabs.watchtower.enable=“true”
+      - traefik.port=8080
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
