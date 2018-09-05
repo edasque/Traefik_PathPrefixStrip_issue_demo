@@ -8,7 +8,7 @@ Once you've clone the repo locally and providing you have docker installed, run:
 And notice the differences between running:
 * the app directly: http://0.0.0.0:9000/ which works
 * the app through traefik with a /my-app/ path: http://0.0.0.0:40080/my-app/, which works
-* the app through traefik with a /my-app path: http://0.0.0.0:40080/my-app , which doesn't work for subfolders
+* the app through traefik with a /my-app path: http://0.0.0.0:40080/my-app , which doesn't work for items in subfolders
 
 Note that you can access traeffik dashboards via http://0.0.0.0:48080/dashboard/
 
